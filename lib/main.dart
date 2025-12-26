@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:arumbu/constants/hive_boxes.dart';
 import 'package:arumbu/model/sync_plants_response.dart';
@@ -14,6 +15,7 @@ import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
   await Hive.initFlutter();
   final languageProvider = LanguageProvider();
   await languageProvider.loadLanguage('en');
