@@ -1,0 +1,145 @@
+# =========================
+# Flutter / Dart (general)
+# =========================
+.dart_tool/
+.packages
+build/
+coverage/
+flutter_export_environment.sh
+**/GeneratedPluginRegistrant.*
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.flutter-plugins-generated
+.melos_tool/            # if you use melos
+.dart_tool_pub/         # rare, but sometimes created by tools
+
+# Keep lockfile for APPS (improves reproducibility).
+# If you're publishing a PACKAGE/library, consider ignoring it instead.
+# !pubspec.lock   # <-- keep it (default). For packages, you may change to: pubspec.lock
+
+# ==========
+# FVM
+# ==========
+# Keep the pin file so teammates get the same version:
+!.fvmrc
+
+# =========================
+# Android / Kotlin / Gradle
+# =========================
+**/android/.gradle/
+**/android/.idea/
+**/android/local.properties
+**/android/**/build/
+**/android/**/captures/
+**/android/**/.cxx/        # native build intermediates
+**/*.iml
+
+# Signing / secrets
+**/android/key.properties
+**/android/app/*.keystore
+**/android/app/*.keystore.*
+**/android/app/*.jks
+
+# Gradle wrapper cache (keep wrapper files in repo, just ignore caches)
+**/android/.gradle/
+**/android/gradle/wrapper/gradle-wrapper.properties~   # temp edits
+
+# ==========
+# iOS / macOS
+# ==========
+**/ios/Flutter/.last_build_id
+**/ios/.generated/
+**/ios/Pods/
+**/ios/build/
+**/ios/.symlinks/
+**/ios/Runner/GeneratedPluginRegistrant.*
+**/macos/Flutter/ephemeral/
+**/macos/Pods/
+**/macos/build/
+
+# Xcode user data / artifacts
+**/*.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+**/*.xcuserstate
+**/*.xcuserdatad/
+**/DerivedData/
+**/*.xcscmblueprint
+
+# iOS/macOS secrets & provisioning
+**/ios/Runner/GoogleService-Info.plist
+**/ios/firebase_app_id_file.json
+**/*.mobileprovision
+**/*.provisionprofile
+**/*.p8
+**/*.cer
+**/*.pem
+
+# =========================
+# Windows / Linux / Web
+# =========================
+**/windows/**/x64/
+**/windows/**/x86/
+**/windows/**/arm*/        # architecture-specific build dirs
+**/windows/**/CMakeFiles/
+**/windows/**/CMakeCache.txt
+**/linux/**/CMakeFiles/
+**/linux/**/CMakeCache.txt
+**/linux/**/build/
+**/web/.dart_tool/         # rare; usually only top-level .dart_tool matters
+
+# =========================
+# IDEs / Editors
+# =========================
+# VS Code
+.vscode/*
+!.vscode/settings.json     # keep if you pin FVM: "dart.flutterSdkPath": ".fvm/flutter_sdk"
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# Android Studio / IntelliJ
+*.iml
+.idea/
+*.ipr
+*.iws
+
+# =========================
+# Fastlane / CI artifacts
+# =========================
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots/**/*.png
+**/fastlane/test_output/
+
+# =========================
+# Firebase / Amplify / Others
+# =========================
+# Android Firebase config
+**/android/app/google-services.json
+
+# Amplify / other CLI caches (uncomment if used)
+# amplify/.config/local-*
+# amplify/#current-cloud-backend
+# awsconfiguration.json
+# amplifyconfiguration.json
+
+# =========================
+# Env / Secrets (general)
+# =========================
+.env
+.env.*
+*.secret
+*.credentials
+*.key
+*.crt
+
+# =========================
+# OS cruft
+# =========================
+.DS_Store
+Thumbs.db
+.svn/
+*.swp
+*.tmp
+*.log
+
+# FVM Version Cache
+.fvm/
